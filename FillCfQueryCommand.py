@@ -42,6 +42,7 @@ class FillCfQueryCommand(sublime_plugin.TextCommand):
 
 
 	def __populateParameters(self, text):
+		text += "\n"
 		start = text.find("Query Parameter Value")
 		searchArea = ""
 		params = []
