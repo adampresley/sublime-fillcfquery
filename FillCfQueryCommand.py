@@ -10,7 +10,7 @@ class FillCfQueryCommand(sublime_plugin.TextCommand):
 
 		if len(self.view.sel()) == 1:
 			if self.view.sel()[0].empty():
-				print "Empty selection"
+				print("Empty selection")
 
 		for region in self.view.sel():
 			if not region.empty():
@@ -39,7 +39,7 @@ class FillCfQueryCommand(sublime_plugin.TextCommand):
 					whole = whole[0:queryParamsStart]
 
 					self.view.replace(edit, region, whole)
-					
+
 
 	def __populateParameters(self, text):
 		start = text.find("Query Parameter Value")
